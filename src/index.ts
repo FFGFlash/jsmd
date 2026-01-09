@@ -64,6 +64,10 @@ export class MarkdownParser {
     return this;
   }
 
+  parseToHTML(text: string) {
+    return this.parse(text).join("");
+  }
+
   parse(text: string) {
     const result: Block[] = [];
     let lines = text.split("\n");
